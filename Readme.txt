@@ -1,36 +1,28 @@
 to run the gui open anaconda > then > MachineLearning > Terminal and paste this :
 streamlit run "C:\Users\abhay\OneDrive\Desktop (1)\Diabetes prediction\Diabetes Pred Gui.py"
 
-# 🩺 Diabetes Prediction using Machine Learning
+🩺 Diabetes Prediction using Machine Learning
 
 This project uses machine learning models to predict the likelihood of diabetes in patients based on medical diagnostic data. It leverages supervised learning techniques and a streamlined data science workflow to build, compare, and deploy classification models.
 
----
-
-## 📊 Overview
+📊 Overview
 
 - **Dataset**: Pima Indians Diabetes Dataset
 - **Tools Used**: Python, pandas, NumPy, scikit-learn, matplotlib, seaborn, pickle, **Streamlit**
 - **Techniques**: Data Cleaning, Imputation, Feature Scaling, Model Building, Evaluation, Serialization, GUI Development
 
----
-
-## 🔍 Problem Statement
+🔍 Problem Statement
 
 Diabetes is a chronic medical condition that requires early diagnosis to manage effectively. The goal of this project is to predict whether a patient has diabetes using health indicators such as glucose levels, BMI, insulin levels, etc.
 
----
-
-## 🧹 Data Preprocessing
+🧹 Data Preprocessing
 
 - Loaded dataset using `pandas`
 - Identified and replaced biologically invalid `0` values in key columns (`Glucose`, `BloodPressure`, `SkinThickness`, `Insulin`, `BMI`) with the column means
 - Created feature matrix `X` and target vector `y` from the dataset
 - Split the data into **80% training** and **20% testing** sets
 
----
-
-## ⚙️ Model Building
+⚙️ Model Building
 
 Used scikit-learn `Pipeline` to streamline preprocessing and modeling. Models built and evaluated:
 
@@ -45,9 +37,7 @@ Each model pipeline includes:
 - Feature scaling using `StandardScaler` (where needed)
 - Model training and evaluation using `model.score()` on the test set
 
----
-
-## 📈 Model Evaluation
+📈 Model Evaluation
 
 Test accuracy comparison across models:
 
@@ -62,9 +52,7 @@ Test accuracy comparison across models:
 
 *Gradient Boosting achieved the highest accuracy.*
 
----
-
-## 🖥️ Streamlit App
+🖥️ Streamlit App
 
 Built a dynamic **Graphical User Interface (GUI)** using **Streamlit** to interact with the trained model in real time:
 
@@ -78,9 +66,7 @@ Run it locally:
 streamlit run app.py
 ````
 
----
-
-## 💾 Model Serialization
+💾 Model Serialization
 
 The best model was saved using `pickle`:
 
@@ -92,10 +78,7 @@ pickle.dump(best_model, open(filename, 'wb'))
 
 This allows for reloading and using the model in production without retraining.
 
----
-
-
-## 🚀 Future Enhancements
+🚀 Future Enhancements
 
 * Add **input validation** and **probability sliders** to Streamlit app
 * Include **ROC curves**, **confusion matrices**, and **feature importance plots**
